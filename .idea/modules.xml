@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/anime-app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/anime-app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/wDemo-data.iml" filepath="$PROJECT_DIR$/.idea/wDemo-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wiremock-cloud/wiremock-cloud.iml" filepath="$PROJECT_DIR$/wiremock-cloud/wiremock-cloud.iml" />
     </modules>
   </component>
 </project>
