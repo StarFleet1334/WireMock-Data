@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.572s</div>
+<div class="counter">0.602s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">getAllAnime()</td>
-<td class="success">0.572s</td>
+<td class="success">0.602s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,10 +90,10 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-06-26 21:04:06.174 Verbose logging enabled
+<pre>2024-06-26 22:45:07.016 Verbose logging enabled
 baseUrl : http://localhost:8088/
-2024-06-26 21:04:06.658 Received request to /mappings with body {
-  &quot;id&quot; : &quot;476e1e90-5e80-48e0-ac4b-9f4618f05f47&quot;,
+2024-06-26 22:45:07.576 Received request to /mappings with body {
+  &quot;id&quot; : &quot;22da7c10-6704-43b0-943a-1b83312b9cf7&quot;,
   &quot;request&quot; : {
     &quot;method&quot; : &quot;ANY&quot;
   },
@@ -101,10 +101,10 @@ baseUrl : http://localhost:8088/
     &quot;status&quot; : 200,
     &quot;proxyBaseUrl&quot; : &quot;http://localhost:8081&quot;
   },
-  &quot;uuid&quot; : &quot;476e1e90-5e80-48e0-ac4b-9f4618f05f47&quot;
+  &quot;uuid&quot; : &quot;22da7c10-6704-43b0-943a-1b83312b9cf7&quot;
 }
-2024-06-26 21:04:06.702 Received request to /mappings with body {
-  &quot;id&quot; : &quot;03a9159c-3521-4dad-a061-2fe75f3ae9db&quot;,
+2024-06-26 22:45:07.626 Received request to /mappings with body {
+  &quot;id&quot; : &quot;01d43290-cd34-4e7d-bb7b-fefc2e7208a7&quot;,
   &quot;request&quot; : {
     &quot;urlPath&quot; : &quot;/animes&quot;,
     &quot;method&quot; : &quot;GET&quot;
@@ -116,9 +116,9 @@ baseUrl : http://localhost:8088/
       &quot;Content-Type&quot; : &quot;application/json&quot;
     }
   },
-  &quot;uuid&quot; : &quot;03a9159c-3521-4dad-a061-2fe75f3ae9db&quot;
+  &quot;uuid&quot; : &quot;01d43290-cd34-4e7d-bb7b-fefc2e7208a7&quot;
 }
-2024-06-26 21:04:06.911 Request received:
+2024-06-26 22:45:07.849 Request received:
 127.0.0.1 - GET /animes
 
 User-Agent: [ReactorNetty/0.8.9.RELEASE]
@@ -141,7 +141,7 @@ Matched response definition:
 Response:
 HTTP/1.1 200
 Content-Type: [application/json]
-Matched-Stub-Id: [03a9159c-3521-4dad-a061-2fe75f3ae9db]
+Matched-Stub-Id: [01d43290-cd34-4e7d-bb7b-fefc2e7208a7]
 
 
 </pre>
@@ -150,23 +150,25 @@ Matched-Stub-Id: [03a9159c-3521-4dad-a061-2fe75f3ae9db]
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @528ms
+<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @620ms
 [Test worker] INFO org.eclipse.jetty.server.Server - jetty-9.2.24.v20180105
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e807732{/__admin,null,AVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4427137d{/,null,AVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@36b01332{HTTP/1.1}{0.0.0.0:8088}
-[Test worker] INFO org.eclipse.jetty.server.Server - Started @585ms
-[qtp1461516055-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
-[qtp1461516055-23] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
-[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@36b01332{HTTP/1.1}{0.0.0.0:8088}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4427137d{/,null,UNAVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e807732{/__admin,null,UNAVAILABLE}
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1461516055-24,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1461516055-18,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=5,q=6} Couldn't stop Thread[qtp1461516055-22,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-21,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-23,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-17,5,main]
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3f48404b{/__admin,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3c0f2349{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@1aabb6b2{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started @714ms
+[qtp1271055942-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[qtp1271055942-23] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@1aabb6b2{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3c0f2349{/,null,UNAVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3f48404b{/__admin,null,UNAVAILABLE}
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=8,q=8} Couldn't stop Thread[qtp1271055942-24,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1271055942-19,5,]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1271055942-20,5,]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1271055942-21,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=5,q=6} Couldn't stop Thread[qtp1271055942-23,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=5,q=6} Couldn't stop Thread[qtp1271055942-18,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=4,q=5} Couldn't stop Thread[qtp1271055942-22,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1271055942{STOPPING,8&lt;=8&lt;=10,i=4,q=5} Couldn't stop Thread[qtp1271055942-17,5,main]
 </pre>
 </span>
 </div>
@@ -178,7 +180,7 @@ Matched-Stub-Id: [03a9159c-3521-4dad-a061-2fe75f3ae9db]
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2024, 9:04:07 PM</p>
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2024, 10:45:08 PM</p>
 </div>
 </div>
 </body>
