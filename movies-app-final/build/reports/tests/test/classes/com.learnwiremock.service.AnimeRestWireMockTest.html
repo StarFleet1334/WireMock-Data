@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.380s</div>
+<div class="counter">0.572s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,8 +81,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">getAllAnimeAndPrint()</td>
-<td class="success">0.380s</td>
+<td class="success">getAllAnime()</td>
+<td class="success">0.572s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,10 +90,10 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-06-26 20:44:57.398 Verbose logging enabled
+<pre>2024-06-26 21:04:06.174 Verbose logging enabled
 baseUrl : http://localhost:8088/
-2024-06-26 20:44:57.955 Received request to /mappings with body {
-  &quot;id&quot; : &quot;a90f4990-2cc0-4936-bef4-c9bee8e6d4e7&quot;,
+2024-06-26 21:04:06.658 Received request to /mappings with body {
+  &quot;id&quot; : &quot;476e1e90-5e80-48e0-ac4b-9f4618f05f47&quot;,
   &quot;request&quot; : {
     &quot;method&quot; : &quot;ANY&quot;
   },
@@ -101,11 +101,12 @@ baseUrl : http://localhost:8088/
     &quot;status&quot; : 200,
     &quot;proxyBaseUrl&quot; : &quot;http://localhost:8081&quot;
   },
-  &quot;uuid&quot; : &quot;a90f4990-2cc0-4936-bef4-c9bee8e6d4e7&quot;
+  &quot;uuid&quot; : &quot;476e1e90-5e80-48e0-ac4b-9f4618f05f47&quot;
 }
-2024-06-26 20:44:58.004 Received request to /mappings with body {
-  &quot;id&quot; : &quot;73d68499-25a9-48f2-8d21-f6a57e3d5a59&quot;,
+2024-06-26 21:04:06.702 Received request to /mappings with body {
+  &quot;id&quot; : &quot;03a9159c-3521-4dad-a061-2fe75f3ae9db&quot;,
   &quot;request&quot; : {
+    &quot;urlPath&quot; : &quot;/animes&quot;,
     &quot;method&quot; : &quot;GET&quot;
   },
   &quot;response&quot; : {
@@ -115,28 +116,57 @@ baseUrl : http://localhost:8088/
       &quot;Content-Type&quot; : &quot;application/json&quot;
     }
   },
-  &quot;uuid&quot; : &quot;73d68499-25a9-48f2-8d21-f6a57e3d5a59&quot;
+  &quot;uuid&quot; : &quot;03a9159c-3521-4dad-a061-2fe75f3ae9db&quot;
 }
+2024-06-26 21:04:06.911 Request received:
+127.0.0.1 - GET /animes
+
+User-Agent: [ReactorNetty/0.8.9.RELEASE]
+Host: [localhost:8088]
+Accept-Encoding: [gzip]
+Accept: [*/*]
+
+
+
+Matched response definition:
+{
+  &quot;status&quot; : 200,
+  &quot;body&quot; : &quot;[\n  {\n    \&quot;title\&quot;: \&quot;Naruto\&quot;,\n    \&quot;rating\&quot;: 8.5,\n    \&quot;mainCharacter\&quot;: \&quot;Naruto Uzumaki\&quot;,\n    \&quot;description\&quot;: \&quot;A young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Attack on Titan\&quot;,\n    \&quot;rating\&quot;: 9.3,\n    \&quot;mainCharacter\&quot;: \&quot;Eren Yeager\&quot;,\n    \&quot;description\&quot;: \&quot;In a world where humanity resides within enormous walled cities to protect themselves from Titans, Eren vows to destroy every last Titan.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;One Piece\&quot;,\n    \&quot;rating\&quot;: 9.0,\n    \&quot;mainCharacter\&quot;: \&quot;Monkey D. Luffy\&quot;,\n    \&quot;description\&quot;: \&quot;Luffy and his pirate crew in search of the legendary treasure called \\\&quot;One Piece\\\&quot; to become the Pirate King.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;My Hero Academia\&quot;,\n    \&quot;rating\&quot;: 8.8,\n    \&quot;mainCharacter\&quot;: \&quot;Izuku Midoriya\&quot;,\n    \&quot;description\&quot;: \&quot;A boy born without superpowers in a world where they are common, but still dreams of becoming a superhero.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Death Note\&quot;,\n    \&quot;rating\&quot;: 9.4,\n    \&quot;mainCharacter\&quot;: \&quot;Light Yagami\&quot;,\n    \&quot;description\&quot;: \&quot;A high school student discovers a supernatural notebook that allows him to kill anyone by writing the person’s name while picturing their face.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Bleach\&quot;,\n    \&quot;rating\&quot;: 8.1,\n    \&quot;mainCharacter\&quot;: \&quot;Ichigo Kurosaki\&quot;,\n    \&quot;description\&quot;: \&quot;A teenager who obtains the powers of a Soul Reaper, a death personification similar to the Grim Reaper.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Tokyo Ghoul\&quot;,\n    \&quot;rating\&quot;: 8.7,\n    \&quot;mainCharacter\&quot;: \&quot;Ken Kaneki\&quot;,\n    \&quot;description\&quot;: \&quot;A college student who gets turned into a half-ghoul and must deal with societal issues while surviving on human flesh.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Sword Art Online\&quot;,\n    \&quot;rating\&quot;: 7.3,\n    \&quot;mainCharacter\&quot;: \&quot;Kirito\&quot;,\n    \&quot;description\&quot;: \&quot;Players of a virtual reality MMORPG find themselves trapped and fighting for survival.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Fullmetal Alchemist: Brotherhood\&quot;,\n    \&quot;rating\&quot;: 9.5,\n    \&quot;mainCharacter\&quot;: \&quot;Edward Elric\&quot;,\n    \&quot;description\&quot;: \&quot;Two brothers use alchemy to try to resurrect their mother, but unleash something much more sinister.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Steins;Gate\&quot;,\n    \&quot;rating\&quot;: 9.2,\n    \&quot;mainCharacter\&quot;: \&quot;Rintarou Okabe\&quot;,\n    \&quot;description\&quot;: \&quot;A group of friends who discover a way to send messages to the past and its dramatic repercussions.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Dragon Ball Z\&quot;,\n    \&quot;rating\&quot;: 8.2,\n    \&quot;mainCharacter\&quot;: \&quot;Goku\&quot;,\n    \&quot;description\&quot;: \&quot;Goku and his friends defend the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Cowboy Bebop\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Spike Spiegel\&quot;,\n    \&quot;description\&quot;: \&quot;Follows the lives of a bounty hunter crew traveling in their spaceship called the Bebop.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Demon Slayer\&quot;,\n    \&quot;rating\&quot;: 8.8,\n    \&quot;mainCharacter\&quot;: \&quot;Tanjiro Kamado\&quot;,\n    \&quot;description\&quot;: \&quot;A young boy becomes a demon slayer after his family is slaughtered and his younger sister turned into a demon.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Hunter x Hunter\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Gon Freecss\&quot;,\n    \&quot;description\&quot;: \&quot;Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Neon Genesis Evangelion\&quot;,\n    \&quot;rating\&quot;: 8.5,\n    \&quot;mainCharacter\&quot;: \&quot;Shinji Ikari\&quot;,\n    \&quot;description\&quot;: \&quot;A teenage boy is recruited by his father to pilot a giant robot under the city Tokyo-3 and battle beings known as Angels.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Code Geass\&quot;,\n    \&quot;rating\&quot;: 8.7,\n    \&quot;mainCharacter\&quot;: \&quot;Lelouch Lamperouge\&quot;,\n    \&quot;description\&quot;: \&quot;A prince given the power to control people with a command teams up with rebels to take down the empire.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Re:Zero - Starting Life in Another World\&quot;,\n    \&quot;rating\&quot;: 8.4,\n    \&quot;mainCharacter\&quot;: \&quot;Subaru Natsuki\&quot;,\n    \&quot;description\&quot;: \&quot;A boy is summoned to another world and has the ability to rewind death, reliving his life to find the right path.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;One Punch Man\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Saitama\&quot;,\n    \&quot;description\&quot;: \&quot;A superhero so strong that he can defeat any opponent with a single punch grows bored by the lack of challenge.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Mob Psycho 100\&quot;,\n    \&quot;rating\&quot;: 8.6,\n    \&quot;mainCharacter\&quot;: \&quot;Shigeo Kageyama\&quot;,\n    \&quot;description\&quot;: \&quot;A young psychic strives to live a normal life and control his abilities.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Fate/Stay Night\&quot;,\n    \&quot;rating\&quot;: 8.0,\n    \&quot;mainCharacter\&quot;: \&quot;Shirou Emiya\&quot;,\n    \&quot;description\&quot;: \&quot;Several mages summon legendary heroes to fight for them in a battle for an omnipotent wish-granting device.\&quot;\n  }\n]\n&quot;,
+  &quot;bodyFileName&quot; : &quot;all-anime.json&quot;,
+  &quot;headers&quot; : {
+    &quot;Content-Type&quot; : &quot;application/json&quot;
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [03a9159c-3521-4dad-a061-2fe75f3ae9db]
+
+
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @567ms
+<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @528ms
 [Test worker] INFO org.eclipse.jetty.server.Server - jetty-9.2.24.v20180105
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6408423d{/__admin,null,AVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@10263dfa{/,null,AVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@2e326754{HTTP/1.1}{0.0.0.0:8088}
-[Test worker] INFO org.eclipse.jetty.server.Server - Started @632ms
-[qtp476817815-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
-[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@2e326754{HTTP/1.1}{0.0.0.0:8088}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@10263dfa{/,null,UNAVAILABLE}
-[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6408423d{/__admin,null,UNAVAILABLE}
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp476817815-24,5,]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=3,q=6} Couldn't stop Thread[qtp476817815-18,5,main]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=3,q=5} Couldn't stop Thread[qtp476817815-20,5,]
-[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=1,q=5} Couldn't stop Thread[qtp476817815-23,5,main]
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e807732{/__admin,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4427137d{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@36b01332{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started @585ms
+[qtp1461516055-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[qtp1461516055-23] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@36b01332{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4427137d{/,null,UNAVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e807732{/__admin,null,UNAVAILABLE}
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1461516055-24,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp1461516055-18,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=5,q=6} Couldn't stop Thread[qtp1461516055-22,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-21,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-23,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp1461516055{STOPPING,8&lt;=8&lt;=10,i=4,q=6} Couldn't stop Thread[qtp1461516055-17,5,main]
 </pre>
 </span>
 </div>
@@ -148,7 +178,7 @@ baseUrl : http://localhost:8088/
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2024, 8:44:58 PM</p>
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2024, 9:04:07 PM</p>
 </div>
 </div>
 </body>

@@ -20,11 +20,14 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import static com.learnwiremock.endpoints.UtilEndpoints.GET_ALL_ANIME;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(WireMockExtension.class)
 public class AnimeRestWireMockTest {
@@ -38,6 +41,7 @@ public class AnimeRestWireMockTest {
     @ConfigureWireMock
     Options options = wireMockConfig().
             port(8088)
+            // This notifier prints in the console all the necessary information
             .notifier(new ConsoleNotifier(true))
             .extensions(new ResponseTemplateTransformer(true));
 
@@ -70,15 +74,25 @@ public class AnimeRestWireMockTest {
     }
 
     @Test
-    void getAllAnime() {
+    void getAllAnime() throws InterruptedException {
+        stubFor(get(urlPathEqualTo(GET_ALL_ANIME.getPath())).willReturn(
+                aResponse()
+                        .withStatus(HttpStatus.OK.value())
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBodyFile("all-anime.json")));
         Flux<Anime> animeFlux = animeRestClient.getAllAnime();
-//        StepVerifier.create(animeFlux)
-//                .expectNextMatches(anime -> {
-//                    assertNotNull(anime, "Anime should not be null");
-//                    return anime.getTitle().contains("Naruto"); // Check if 'Naruto' is in the list
-//                })
-//                .expectNextCount(19)  // Expect 19 more elements, adjust number based on expected items
-//                .verifyComplete();
+        // Preparing to count items in the flux
+        AtomicInteger count = new AtomicInteger(0);
+        CountDownLatch latch = new CountDownLatch(1);  // Ensures we wait for completion
+
+        animeFlux.subscribe(
+                anime -> count.getAndIncrement(),
+                error -> {},
+                latch::countDown  // Counting down the latch when the flux completes
+        );
+
+        latch.await();  // Waiting for the flux to complete
+        assertTrue(count.get() > 0, "The anime list should not be empty");
     }
 
     @Test
@@ -138,6 +152,6 @@ public class AnimeRestWireMockTest {
     @AfterEach
     void tearDown() {
         // Optional cleanup can be done here if necessary
-
+        wireMockServer.stop();
     }
 }
