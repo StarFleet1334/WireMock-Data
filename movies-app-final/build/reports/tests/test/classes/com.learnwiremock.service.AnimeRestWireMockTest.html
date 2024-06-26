@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AnimeRestWireMockTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AnimeRestWireMockTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.learnwiremock.service.html">com.learnwiremock.service</a> &gt; AnimeRestWireMockTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.380s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllAnimeAndPrint()</td>
+<td class="success">0.380s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-06-26 20:44:57.398 Verbose logging enabled
+baseUrl : http://localhost:8088/
+2024-06-26 20:44:57.955 Received request to /mappings with body {
+  &quot;id&quot; : &quot;a90f4990-2cc0-4936-bef4-c9bee8e6d4e7&quot;,
+  &quot;request&quot; : {
+    &quot;method&quot; : &quot;ANY&quot;
+  },
+  &quot;response&quot; : {
+    &quot;status&quot; : 200,
+    &quot;proxyBaseUrl&quot; : &quot;http://localhost:8081&quot;
+  },
+  &quot;uuid&quot; : &quot;a90f4990-2cc0-4936-bef4-c9bee8e6d4e7&quot;
+}
+2024-06-26 20:44:58.004 Received request to /mappings with body {
+  &quot;id&quot; : &quot;73d68499-25a9-48f2-8d21-f6a57e3d5a59&quot;,
+  &quot;request&quot; : {
+    &quot;method&quot; : &quot;GET&quot;
+  },
+  &quot;response&quot; : {
+    &quot;status&quot; : 200,
+    &quot;bodyFileName&quot; : &quot;all-anime.json&quot;,
+    &quot;headers&quot; : {
+      &quot;Content-Type&quot; : &quot;application/json&quot;
+    }
+  },
+  &quot;uuid&quot; : &quot;73d68499-25a9-48f2-8d21-f6a57e3d5a59&quot;
+}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @567ms
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-9.2.24.v20180105
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6408423d{/__admin,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@10263dfa{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@2e326754{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started @632ms
+[qtp476817815-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@2e326754{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@10263dfa{/,null,UNAVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6408423d{/__admin,null,UNAVAILABLE}
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=6,q=6} Couldn't stop Thread[qtp476817815-24,5,]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=3,q=6} Couldn't stop Thread[qtp476817815-18,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=3,q=5} Couldn't stop Thread[qtp476817815-20,5,]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp476817815{STOPPING,8&lt;=8&lt;=10,i=1,q=5} Couldn't stop Thread[qtp476817815-23,5,main]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 26, 2024, 8:44:58 PM</p>
+</div>
+</div>
+</body>
+</html>
