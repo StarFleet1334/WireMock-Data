@@ -1,4 +1,5 @@
 {
+  "id": "{{request.path.[1]}}",
   "title": "Naruto",
   "rating": 8.5,
   "mainCharacter": "Naruto Uzumaki",
