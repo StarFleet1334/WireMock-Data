@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AnimeRestWireMockTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AnimeRestWireMockTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.learnwiremock.service.html">com.learnwiremock.service</a> &gt; AnimeRestWireMockTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.578s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllAnime()</td>
+<td class="success">0.578s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-06-27 19:37:51.408 Verbose logging enabled
+baseUrl : http://localhost:8088/
+2024-06-27 19:37:51.915 Received request to /mappings with body {
+  &quot;id&quot; : &quot;a6a48b80-47cf-4384-ab43-65af431d572c&quot;,
+  &quot;request&quot; : {
+    &quot;urlPath&quot; : &quot;/animes&quot;,
+    &quot;method&quot; : &quot;GET&quot;
+  },
+  &quot;response&quot; : {
+    &quot;status&quot; : 200,
+    &quot;bodyFileName&quot; : &quot;all-anime.json&quot;,
+    &quot;headers&quot; : {
+      &quot;Content-Type&quot; : &quot;application/json&quot;
+    }
+  },
+  &quot;uuid&quot; : &quot;a6a48b80-47cf-4384-ab43-65af431d572c&quot;
+}
+2024-06-27 19:37:52.163 Request received:
+127.0.0.1 - GET /animes
+
+User-Agent: [ReactorNetty/0.8.9.RELEASE]
+Host: [localhost:8088]
+Accept-Encoding: [gzip]
+Accept: [*/*]
+
+
+
+Matched response definition:
+{
+  &quot;status&quot; : 200,
+  &quot;body&quot; : &quot;[\n  {\n    \&quot;title\&quot;: \&quot;Naruto\&quot;,\n    \&quot;rating\&quot;: 8.5,\n    \&quot;mainCharacter\&quot;: \&quot;Naruto Uzumaki\&quot;,\n    \&quot;description\&quot;: \&quot;A young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Attack on Titan\&quot;,\n    \&quot;rating\&quot;: 9.3,\n    \&quot;mainCharacter\&quot;: \&quot;Eren Yeager\&quot;,\n    \&quot;description\&quot;: \&quot;In a world where humanity resides within enormous walled cities to protect themselves from Titans, Eren vows to destroy every last Titan.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;One Piece\&quot;,\n    \&quot;rating\&quot;: 9.0,\n    \&quot;mainCharacter\&quot;: \&quot;Monkey D. Luffy\&quot;,\n    \&quot;description\&quot;: \&quot;Luffy and his pirate crew in search of the legendary treasure called \\\&quot;One Piece\\\&quot; to become the Pirate King.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;My Hero Academia\&quot;,\n    \&quot;rating\&quot;: 8.8,\n    \&quot;mainCharacter\&quot;: \&quot;Izuku Midoriya\&quot;,\n    \&quot;description\&quot;: \&quot;A boy born without superpowers in a world where they are common, but still dreams of becoming a superhero.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Death Note\&quot;,\n    \&quot;rating\&quot;: 9.4,\n    \&quot;mainCharacter\&quot;: \&quot;Light Yagami\&quot;,\n    \&quot;description\&quot;: \&quot;A high school student discovers a supernatural notebook that allows him to kill anyone by writing the person’s name while picturing their face.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Bleach\&quot;,\n    \&quot;rating\&quot;: 8.1,\n    \&quot;mainCharacter\&quot;: \&quot;Ichigo Kurosaki\&quot;,\n    \&quot;description\&quot;: \&quot;A teenager who obtains the powers of a Soul Reaper, a death personification similar to the Grim Reaper.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Tokyo Ghoul\&quot;,\n    \&quot;rating\&quot;: 8.7,\n    \&quot;mainCharacter\&quot;: \&quot;Ken Kaneki\&quot;,\n    \&quot;description\&quot;: \&quot;A college student who gets turned into a half-ghoul and must deal with societal issues while surviving on human flesh.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Sword Art Online\&quot;,\n    \&quot;rating\&quot;: 7.3,\n    \&quot;mainCharacter\&quot;: \&quot;Kirito\&quot;,\n    \&quot;description\&quot;: \&quot;Players of a virtual reality MMORPG find themselves trapped and fighting for survival.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Fullmetal Alchemist: Brotherhood\&quot;,\n    \&quot;rating\&quot;: 9.5,\n    \&quot;mainCharacter\&quot;: \&quot;Edward Elric\&quot;,\n    \&quot;description\&quot;: \&quot;Two brothers use alchemy to try to resurrect their mother, but unleash something much more sinister.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Steins;Gate\&quot;,\n    \&quot;rating\&quot;: 9.2,\n    \&quot;mainCharacter\&quot;: \&quot;Rintarou Okabe\&quot;,\n    \&quot;description\&quot;: \&quot;A group of friends who discover a way to send messages to the past and its dramatic repercussions.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Dragon Ball Z\&quot;,\n    \&quot;rating\&quot;: 8.2,\n    \&quot;mainCharacter\&quot;: \&quot;Goku\&quot;,\n    \&quot;description\&quot;: \&quot;Goku and his friends defend the Earth against an assortment of villains ranging from intergalactic space fighters and conquerors.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Cowboy Bebop\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Spike Spiegel\&quot;,\n    \&quot;description\&quot;: \&quot;Follows the lives of a bounty hunter crew traveling in their spaceship called the Bebop.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Demon Slayer\&quot;,\n    \&quot;rating\&quot;: 8.8,\n    \&quot;mainCharacter\&quot;: \&quot;Tanjiro Kamado\&quot;,\n    \&quot;description\&quot;: \&quot;A young boy becomes a demon slayer after his family is slaughtered and his younger sister turned into a demon.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Hunter x Hunter\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Gon Freecss\&quot;,\n    \&quot;description\&quot;: \&quot;Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Neon Genesis Evangelion\&quot;,\n    \&quot;rating\&quot;: 8.5,\n    \&quot;mainCharacter\&quot;: \&quot;Shinji Ikari\&quot;,\n    \&quot;description\&quot;: \&quot;A teenage boy is recruited by his father to pilot a giant robot under the city Tokyo-3 and battle beings known as Angels.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Code Geass\&quot;,\n    \&quot;rating\&quot;: 8.7,\n    \&quot;mainCharacter\&quot;: \&quot;Lelouch Lamperouge\&quot;,\n    \&quot;description\&quot;: \&quot;A prince given the power to control people with a command teams up with rebels to take down the empire.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Re:Zero - Starting Life in Another World\&quot;,\n    \&quot;rating\&quot;: 8.4,\n    \&quot;mainCharacter\&quot;: \&quot;Subaru Natsuki\&quot;,\n    \&quot;description\&quot;: \&quot;A boy is summoned to another world and has the ability to rewind death, reliving his life to find the right path.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;One Punch Man\&quot;,\n    \&quot;rating\&quot;: 8.9,\n    \&quot;mainCharacter\&quot;: \&quot;Saitama\&quot;,\n    \&quot;description\&quot;: \&quot;A superhero so strong that he can defeat any opponent with a single punch grows bored by the lack of challenge.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Mob Psycho 100\&quot;,\n    \&quot;rating\&quot;: 8.6,\n    \&quot;mainCharacter\&quot;: \&quot;Shigeo Kageyama\&quot;,\n    \&quot;description\&quot;: \&quot;A young psychic strives to live a normal life and control his abilities.\&quot;\n  },\n  {\n    \&quot;title\&quot;: \&quot;Fate/Stay Night\&quot;,\n    \&quot;rating\&quot;: 8.0,\n    \&quot;mainCharacter\&quot;: \&quot;Shirou Emiya\&quot;,\n    \&quot;description\&quot;: \&quot;Several mages summon legendary heroes to fight for them in a battle for an omnipotent wish-granting device.\&quot;\n  }\n]\n&quot;,
+  &quot;bodyFileName&quot; : &quot;all-anime.json&quot;,
+  &quot;headers&quot; : {
+    &quot;Content-Type&quot; : &quot;application/json&quot;
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [a6a48b80-47cf-4384-ab43-65af431d572c]
+
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @514ms
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-9.2.24.v20180105
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@42f32cf1{/__admin,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@684a7a61{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@57aa5f66{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started @579ms
+[qtp1941590098-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[qtp1941590098-22] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@57aa5f66{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@684a7a61{/,null,UNAVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@42f32cf1{/__admin,null,UNAVAILABLE}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at Jun 27, 2024, 7:37:52 PM</p>
+</div>
+</div>
+</body>
+</html>
