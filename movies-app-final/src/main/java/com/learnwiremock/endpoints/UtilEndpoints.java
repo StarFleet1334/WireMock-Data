@@ -9,7 +9,8 @@ public enum UtilEndpoints {
     GET_ANIME_BY_ID("/animes/{id}"),
     PUT_ANIME_BY_ID("/animes/{id}"),
     DELETE_ANIME_BY_ID("/animes/{id}"),
-    POST_ANIME("/animes");
+    POST_ANIME("/animes"),
+    DELETE_ANIME_BY_TITLE("/animes/title/{title}");
 
     private final String path;
 
@@ -35,5 +36,10 @@ public enum UtilEndpoints {
     public String withId(int id) {
         return path.replace("{id}", Integer.toString(id));
     }
+
+    public String withTitle(String title) {
+        return getPath().replace("{title}", title.replace(" ", "%20"));  // Encoding spaces for URL
+    }
+
 }
 

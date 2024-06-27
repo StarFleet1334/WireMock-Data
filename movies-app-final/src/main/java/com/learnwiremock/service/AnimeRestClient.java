@@ -64,4 +64,14 @@ public class AnimeRestClient {
                 .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
                 .doOnError(Exception.class, e -> LOGGER.error("Error deleting anime ID: {}", animeId, e));
     }
+
+    public Mono<String> deleteAnimeByTitle(String title) {
+        return webClient.delete()
+                .uri(DELETE_ANIME_BY_TITLE.withTitle(title))
+                .retrieve()
+                .bodyToMono(String.class)
+                .doOnSuccess(response -> LOGGER.info("Successfully deleted anime with title: {}", title))
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error deleting anime by title: {}", title, e));
+    }
 }

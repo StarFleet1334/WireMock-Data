@@ -56,7 +56,6 @@ public class AnimeServerFaultTest {
         webClient = WebClient.create(baseUrl);
         animeRestClient = new AnimeRestClient(webClient);
 
-        stubFor(any(anyUrl()).willReturn(aResponse().proxiedFrom("http://localhost:8081")));
     }
 
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learnwiremock.service.AnimeSelectiveProxyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-27T10:09:21" hostname="Doctor-Who.local" time="0.584">
+  <properties/>
+  <testcase name="deleteAnimeByTitleSelectiveProxying()" classname="com.learnwiremock.service.AnimeSelectiveProxyTest" time="0.584"/>
+  <system-out><![CDATA[2024-06-27 14:09:21.015 Verbose logging enabled
+baseUrl : http://localhost:8088/
+2024-06-27 14:09:21.546 Received request to /mappings with body {
+  "id" : "8f1ac658-b3c9-40b6-9ba5-47569ce50bda",
+  "request" : {
+    "method" : "ANY"
+  },
+  "response" : {
+    "status" : 200,
+    "proxyBaseUrl" : "http://localhost:8080"
+  },
+  "uuid" : "8f1ac658-b3c9-40b6-9ba5-47569ce50bda"
+}
+2024-06-27 14:09:21.667 Received request to /mappings with body {
+  "id" : "b613dee1-37ac-418f-a464-a7fb23f36691",
+  "request" : {
+    "urlPath" : "/animes/title/Naruto",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "Deleted anime with title: Naruto",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  },
+  "uuid" : "b613dee1-37ac-418f-a464-a7fb23f36691"
+}
+2024-06-27 14:09:21.810 Request received:
+127.0.0.1 - DELETE /animes/title/Naruto
+
+User-Agent: [ReactorNetty/0.8.9.RELEASE]
+Host: [localhost:8088]
+Accept-Encoding: [gzip]
+Accept: [*/*]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "Deleted anime with title: Naruto",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [b613dee1-37ac-418f-a464-a7fb23f36691]
+
+
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO org.eclipse.jetty.util.log - Logging initialized @578ms
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-9.2.24.v20180105
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@403b6842{/__admin,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@35ec52d4{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@6e6899aa{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started @639ms
+[qtp511468249-21] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO com.learnwiremock.service.AnimeRestWireMockTest - Deleted anime with title: Naruto
+[Test worker] INFO com.learnwiremock.service.AnimeRestWireMockTest - Result : 
+[qtp511468249-23] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[reactor-http-nio-4] INFO com.learnwiremock.service.AnimeRestClient - Successfully deleted anime with title: Naruto
+[Test worker] INFO org.eclipse.jetty.server.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@6e6899aa{HTTP/1.1}{0.0.0.0:8088}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@35ec52d4{/,null,UNAVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@403b6842{/__admin,null,UNAVAILABLE}
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp511468249{STOPPING,8<=8<=10,i=6,q=7} Couldn't stop Thread[qtp511468249-17,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp511468249{STOPPING,8<=8<=10,i=4,q=6} Couldn't stop Thread[qtp511468249-23,5,main]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp511468249{STOPPING,8<=8<=10,i=3,q=6} Couldn't stop Thread[qtp511468249-21,5,]
+[Test worker] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - qtp511468249{STOPPING,8<=8<=10,i=2,q=6} Couldn't stop Thread[qtp511468249-22,5,main]
+]]></system-err>
+</testsuite>
