@@ -4,11 +4,11 @@ import com.learnwiremock.dto.Anime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import static com.learnwiremock.endpoints.UtilEndpoints.*;
-
 
 public class AnimeRestClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnimeRestClient.class);
@@ -23,7 +23,8 @@ public class AnimeRestClient {
                 .uri(GET_ALL_ANIME.getPath())
                 .retrieve()
                 .bodyToFlux(Anime.class)
-                .doOnError(e -> LOGGER.error("Error retrieving all animes", e));
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error retrieving all animes", e));
     }
 
     public Mono<Anime> getAnimeById(Integer id) {
@@ -31,7 +32,8 @@ public class AnimeRestClient {
                 .uri(uriBuilder -> uriBuilder.path(GET_ANIME_BY_ID.getPath()).build(id))
                 .retrieve()
                 .bodyToMono(Anime.class)
-                .doOnError(e -> LOGGER.error("Error retrieving anime by ID: {}", id, e));
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error retrieving anime by ID: {}", id, e));
     }
 
     public Mono<Anime> postNewAnime(Anime newAnime) {
@@ -40,8 +42,8 @@ public class AnimeRestClient {
                 .body(Mono.just(newAnime), Anime.class)
                 .retrieve()
                 .bodyToMono(Anime.class)
-                .doOnSuccess(anime -> LOGGER.info("Successfully added a new anime: {}", anime))
-                .doOnError(e -> LOGGER.error("Error posting new anime", e));
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error posting new anime", e));
     }
 
     public Mono<Anime> updateExistingAnime(Integer animeId, Anime anime) {
@@ -50,8 +52,8 @@ public class AnimeRestClient {
                 .body(Mono.just(anime), Anime.class)
                 .retrieve()
                 .bodyToMono(Anime.class)
-                .doOnSuccess(updatedAnime -> LOGGER.info("Successfully updated anime: {}", updatedAnime))
-                .doOnError(e -> LOGGER.error("Error updating anime ID: {}", animeId, e));
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error updating anime ID: {}", animeId, e));
     }
 
     public Mono<String> deleteAnimeById(Integer animeId) {
@@ -59,8 +61,7 @@ public class AnimeRestClient {
                 .uri(uriBuilder -> uriBuilder.path(DELETE_ANIME_BY_ID.getPath()).build(animeId))
                 .retrieve()
                 .bodyToMono(String.class)
-                .doOnSuccess(response -> LOGGER.info("Successfully deleted anime ID: {}", animeId))
-                .doOnError(e -> LOGGER.error("Error deleting anime ID: {}", animeId, e));
+                .doOnError(WebClientResponseException.class, e -> LOGGER.error("WebClient response error: Status {}, Body {}", e.getRawStatusCode(), e.getResponseBodyAsString(), e))
+                .doOnError(Exception.class, e -> LOGGER.error("Error deleting anime ID: {}", animeId, e));
     }
 }
-

@@ -7,6 +7,7 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier;
 import com.github.tomakehurst.wiremock.core.Options;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
+import com.github.tomakehurst.wiremock.http.Fault;
 import com.learnwiremock.dto.Anime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -83,6 +84,26 @@ public class AnimeServerFaultTest {
         stubFor(get(urlPathEqualTo(GET_ALL_ANIME.getPath())).willReturn(serverError()
                 .withStatus(HttpStatus.SERVICE_UNAVAILABLE.value())
                 .withBody("Service Unavailable")));
+        Flux<Anime> animeFlux = animeRestClient.getAllAnime();
+        // Preparing to count items in the flux
+        AtomicInteger count = new AtomicInteger(0);
+        CountDownLatch latch = new CountDownLatch(1);  // Ensures we wait for completion
+
+        animeFlux.subscribe(
+                anime -> count.getAndIncrement(),
+                error -> {},
+                latch::countDown  // Counting down the latch when the flux completes
+        );
+        // This part would be printed:
+        // LOGGER.error("Error retrieving all animes", e)
+        latch.await();  // Waiting for the flux to complete
+        assertTrue(count.get() > 0, "The anime list should not be empty");
+    }
+
+    @Test
+    void getAllAnimeFaultResponse() throws InterruptedException {
+        // This one prematurely closes the connection
+        stubFor(get(urlPathEqualTo(GET_ALL_ANIME.getPath())).willReturn(aResponse().withFault(Fault.EMPTY_RESPONSE)));
         Flux<Anime> animeFlux = animeRestClient.getAllAnime();
         // Preparing to count items in the flux
         AtomicInteger count = new AtomicInteger(0);
